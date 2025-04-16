@@ -4,7 +4,7 @@ import configparser
 from print_color import print as printc
 import traceback
 
-cwd = os.getcwd()
+WORKINGDIR=os.path.join(os.path.join(os.path.join(os.getenv("HOME"),'dev'),'servertools'));
 
 def strtobool (val):
         val = val.lower()
@@ -16,7 +16,7 @@ def strtobool (val):
             error=True;
             return None;
 
-def logger(msg,source='NONE',severity='INFO',sameline=False,logFilePath="log.txt"):  
+def logger(msg,source='NONE',severity='INFO',sameline=False,logFilePath=os.path.join(WORKINGDIR,"log.txt")):  
     
     log_to_file=True;
     log_file=logFilePath;
