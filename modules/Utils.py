@@ -4,6 +4,8 @@ import configparser
 from print_color import print as printc
 import traceback
 
+cwd = os.getcwd()
+
 def strtobool (val):
         val = val.lower()
         if val in ('y', 'yes', 't', 'true', 'on', '1'):
@@ -14,7 +16,7 @@ def strtobool (val):
             error=True;
             return None;
 
-def logger(msg,source='NONE',severity='INFO',sameline=False,logFilePath="utils/log.txt"):  
+def logger(msg,source='NONE',severity='INFO',sameline=False,logFilePath="log.txt"):  
     
     log_to_file=True;
     log_file=logFilePath;
