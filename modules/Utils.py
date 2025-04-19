@@ -6,6 +6,9 @@ import traceback
 
 WORKINGDIR=os.path.join(os.path.join(os.path.join(os.getenv("HOME"),'dev'),'servertools'));
 
+if not os.path.exists(WORKINGDIR):
+        os.mkdir(WORKINGDIR)
+
 def strtobool (val):
         val = val.lower()
         if val in ('y', 'yes', 't', 'true', 'on', '1'):
