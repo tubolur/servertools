@@ -3,6 +3,9 @@ import ssl
 import os
 from modules.Utils import *
 
+class HTTPServerV6(HTTPServer):
+    address_family = socket.AF_INET6;
+    
 class HTTPSServer():
     def __init__(self,keyPath="utils/server.pem",certPath="utils/cert.pem",port=4443,address=""):
         self.keyPath=keyPath;
@@ -32,11 +35,11 @@ class HTTPSServer():
             context.load_cert_chain(certfile=self.certPath, keyfile=self.keyPath);
             context.check_hostname = False;
 
-            with HTTPServer((self.address, self.port), SimpleHTTPRequestHandler) as httpd:
-                httpd.socket = context.wrap_socket(httpd.socket, server_side=True);
-                self.log("Server Running");
-                httpd.serve_forever();
-                return httpd;
+            httpd=HTTPServerV6((self.address, self.port), SimpleHTTPRequestHandler);
+            httpd.socket = context.wrap_socket(httpd.socket, server_side=True);
+            self.log("Server Running");
+            httpd.serve_forever();
+            return httpd;
 
         else:
             self.log("Error cert or key not found");
