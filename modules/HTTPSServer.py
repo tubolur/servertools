@@ -1,6 +1,7 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import ssl
 import os
+import socket
 from modules.Utils import *
 
 class HTTPServerV6(HTTPServer):
