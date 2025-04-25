@@ -1,0 +1,50 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+    <title>Simple Message Board (Pure HTML JS CSS)</title>
+    <link rel="canonical" href="https://codepen.io/kylegc/pen/vbExpY">
+</head>
+<body>
+    <div class="wrap">
+        <h1>Simple Message Board</h1>
+    </div>
+    <div class="wrap">     
+        <hr class="style11">
+        <div ng-controller="MsgController">
+        <h2>Post Message</h2> 
+        <form action="mb/">
+        <div class="input-group mb-3">
+        <label for="username"></label><div><input type="text" class="form-control" name="username" id="NewMsgUser" placeholder="Username"></input></div> 
+        <label for="password"><div><input type="text" class="form-control" name="password" id="NewMsgPassword" placeholder="password"></input></div> 
+        <label for="message"><div><input type="text" class="form-control" name="message" placeholder="Message"></input></div> 
+        <div class="input-group-append">
+            <button class="btn btn-outline"><i class="far fa-plus-square"></i> New Message</button></div>
+    <div>
+    </div>
+    </form>
+    </hr>
+    </div>
+    <div class="wrap">
+        <div>
+        <h1 class="title"> Filters </h1>
+        <form action="mb/" id="selUserFilter">
+            <label for="userFilter">Filter by user:</label>
+          <select name="userFilter" id="userFilter" form="selUserFilter">
+            <option value=0>All</option>
+          </select> 
+            <input type="submit" label="Filter">
+          </form>
+          
+          
+        </div>
+    </div>
+    <div class="wrap">
+    <div><h1 class="title">Posts</h1></div>
+    <p class="reply">
+    </p>
+    </div>
+    </div>
+</body>

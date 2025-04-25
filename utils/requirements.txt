@@ -1,0 +1,4 @@
+print_color
+dnspython
+dnserver
+pysqlite3
