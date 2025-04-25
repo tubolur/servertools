@@ -1,3 +1,0 @@
-print_color
-dnspython
-dnserver
