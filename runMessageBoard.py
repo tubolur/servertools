@@ -12,7 +12,13 @@ if not os.path.exists(WORKINGDIR):
 UTILSDIR=os.path.join(WORKINGDIR,"utils")
 
 rh=MessageBoardHTTPRequestHandler;
-mb=MessageBoard(databasePath=os.path.join(UTILSDIR,"database.db"),workingPath=os.path.join(WORKINGDIR,"mb"),requestHandler=rh);#,requestHandler=rh
+mb=MessageBoard(
+                databasePath=os.path.join(UTILSDIR,"database.db"),
+                workingPath=os.path.join(WORKINGDIR,"mb"),
+                requestHandler=rh
+                htmlBasePath=os.path.join(UTILSDIR,"messageBoard.html"),
+                cssPath=os.path.join(UTILSDIR,"style.css")
+               );#,requestHandler=rh
 
 s=HTTPSServer(keyPath=os.path.join(UTILSDIR,"key.pem"),certPath=os.path.join(UTILSDIR,"cert.pem"),requestHandler=rh);#,requestHandler=rh
 print("Hit ctrl+c to exit");
