@@ -129,7 +129,7 @@ class MessageBoard():
         for data in tableDataReversed:
             #self.log(data)
             post=   f'                        <p class="post">\n\
-                            <div class="date"> {data["date"]} </div>\n\
+                            <div class="date"> {datetime.datetime.fromtimestamp(int(data["date"]))} </div>\n\
                             <div class="userName"><span>By: {data["user"]}</span></div>\n\
                             <div class="body">{data["message"]}</div>\n\
                         </p>\n'
