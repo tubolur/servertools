@@ -1,6 +1,6 @@
 # Servertools
 
-This repo includes few programs to be run on servers
+This repo includes few programs to be ran on servers
 
 ## Install
 
