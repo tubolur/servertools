@@ -17,7 +17,7 @@ Note that the certificate is self signed but has to include the domain name inni
 To add the certificate to the trusted ones:
  - With Firefox load the page using https://yourdomain:4443, accept exception, click on the lock next to the url and display certificate
  - a webpage should open, look for **Download** and click PEM(cert). It should download the certificate
- - add the certificate to trusted, on archlinux using `sudo trust anchor --store certificateFile.pem'`
+ - add the certificate to trusted, on archlinux using `sudo trust anchor --store certificateFile.pem`
 
 ## MessageBoard
 
