@@ -1,7 +1,6 @@
 from modules.HTTPSServer import *
 import sys
 
-
 WORKINGDIR=os.path.join(os.path.join(os.path.join(os.getenv("HOME"),'dev'),'servertools'));
 
 if not os.path.exists(WORKINGDIR):
